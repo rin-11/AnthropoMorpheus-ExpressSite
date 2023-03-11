@@ -5,12 +5,17 @@
 
     // mongoose connection
     const mongoose = require('mongoose');
+
+
+    // import products controller
+    const productsController = require('./controllers/products.js')
+
   
     // reference product model
-  const Product = require('./models/products'); 
+    const Product = require('./models/products'); 
 
     // method override
-  const methodOverride = require('method-override');
+    const methodOverride = require('method-override');
 
 
 
@@ -39,47 +44,8 @@
     app.use(methodOverride('_method'));
         //gives us access to DELETE 
     app.use(express.static('public'));
-
-
-
-// R0UTES -- INDUCES
-
-// INDEX
-app.get('/anthropomorpheus', (req, res) => {
-    Product.find({}, (error, allProducts) => {
-        res.render('index.ejs', { 
-            products: allProducts, 
-        });
-    });
-});
-
-
-// NEW
-
-
-
-// DELETE
-
-
-
-// UPDATE
-
-
-// CREATE
-
-
-// SHOW
-
-
-
-
-
-
-
-
-
-
-
+        //link application to router
+    app.use('/anthropomorpheus', productsController);
 
 
 
