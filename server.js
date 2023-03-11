@@ -45,7 +45,13 @@
 // R0UTES -- INDUCES
 
 // INDEX
-
+app.get('/anthropomorpheus', (req, res) => {
+    Product.find({}, (error, allProducts) => {
+        res.render('index.ejs', { 
+            products: allProducts, 
+        });
+    });
+});
 
 
 // NEW
