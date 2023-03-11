@@ -5,6 +5,12 @@
 
     // mongoose connection
     const mongoose = require('mongoose');
+  
+    // reference product model
+  const Product = require('./models/products'); 
+
+    // method override
+  const methodOverride = require('method-override');
 
 
 
@@ -36,8 +42,27 @@
 
 
 
+// R0UTES -- INDUCES
+
+// INDEX
 
 
+
+// NEW
+
+
+
+// DELETE
+
+
+
+// UPDATE
+
+
+// CREATE
+
+
+// SHOW
 
 
 
