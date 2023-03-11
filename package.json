@@ -1,0 +1,26 @@
+{
+  "name": "anthropomorpheus",
+  "version": "1.0.0",
+  "description": "project 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rin-11/AnthropoMorpheus.git"
+  },
+  "author": "rin kates",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rin-11/AnthropoMorpheus/issues"
+  },
+  "homepage": "https://github.com/rin-11/AnthropoMorpheus#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.10.0"
+  }
+}
