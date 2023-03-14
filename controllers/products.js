@@ -82,6 +82,15 @@ router.get('/show', (req, res) => {
 		})
 	})
 })
+// SHOW route 2
+router.get('/:id', (req, res) => {
+	Product.findById(req.params.id, (err, foundProduct) => {
+		if(err){console.log(err.message)}
+		res.render('show2.ejs', {
+			product: foundProduct
+		})
+	})
+})
 
 
 
