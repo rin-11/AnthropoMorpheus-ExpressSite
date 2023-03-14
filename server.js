@@ -45,7 +45,7 @@
         //gives us access to DELETE 
     app.use(express.static('public'));
         //link application to router
-    app.use('/anthropomorpheus', productsController);
+    app.use('/products', productsController);
 
 
 

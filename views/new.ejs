@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="/css/style.css">
+		<title>AnthropoMorpheus New Product Page</title>
+	</head>
+	<body>
+		<%- include ('./partials/header.ejs') %>
+        <div id="new"> 
+            <form action="/products/" method="POST">    
+              <b>Name:</b> <input type="text" name="name"/><br/>
+              <b>Description:</b> <input type="text" name="description" /><br/>
+              <b>Image Address:</b> <input type="text" name="img"/><br/>
+              <b>Specs:</b> <input type="text" name="specs"/><br/>
+               
+              <input type="submit" name="" value="New Product"/>
+            </form>
+        </div> 
+	</body>
+
+</html>
+
+
+
+

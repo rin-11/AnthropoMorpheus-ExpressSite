@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(46, 60, 60);
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+#navigationbar {
+    display: flex;
+}
+
+#navigationbar li {
+    list-style: none;
+    padding: 10px 40px;
+    font-size: 20px;
+}
+
+#navigationbar a {
+    text-decoration: none;
+    color: rgb(158, 151, 151);
+}
+
+#navigationbar a:hover {
+    text-decoration: none;
+    color: azure;
+}
+
+.products ul {
+    display: block;
+}
+
+
