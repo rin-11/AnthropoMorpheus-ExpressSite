@@ -100,4 +100,12 @@ h2 {
     color: white;
 }
 
+#homepage {
+    margin: 20px;
+    padding: 40px;
+    font-size: 25px;
+    border: 10px solid white;
+    color: white;
+}
+
 
