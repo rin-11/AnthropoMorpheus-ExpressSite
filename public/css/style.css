@@ -10,7 +10,7 @@ h1 {
 
 h2 {
     text-align: center;
-    color: rgb(112, 104, 101);
+    color: rgb(153, 141, 137);
 }
 
 #navigationbar {
@@ -20,15 +20,19 @@ h2 {
 #navigationbar li {
     list-style: none;
     padding: 10px 40px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #navigationbar a {
     text-decoration: none;
-    color: rgb(158, 151, 151);
+    color: rgb(247, 156, 156);
 }
 
 #footer {
+    text-align: center;
+}
+
+#new {
     text-align: center;
 }
 
@@ -66,6 +70,12 @@ h2 {
 #products img {
     width: 200px;
     height: 250px;
+}
+
+#new a {
+    text-decoration: none;
+    color: rgb(65, 205, 212);
+    font-size: 20px;
 }
 
 
