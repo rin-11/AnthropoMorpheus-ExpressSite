@@ -14,22 +14,25 @@
 		<ul>
             <% for(let i=0; i < products.length; i++) { %>
                 <li>
+					
+					<br>
                     <a href="/products/<%=products[i].id; %>">
-                        <%=products[i].name; %>
-                    </a>
+                       <h2><%=products[i].name; %></h2>
+					   <img src="<%=products[i].img; %>">
+				</a>
 				</li>
+					<br>
+					<br>
 			<% } %>
 		</ul>
 	</div>
-<br>
-<br>
+	<br>
+	<a href="/products/new">Add Product</a>
+	<br>
 
-
-		<a href="/products/new">Add Product</a>
-		<a href="/products">Back to Home Page</a>
 		
-
-
+	<%- include ('./partials/footer.ejs') %>
+		
 	
 	</body>
 

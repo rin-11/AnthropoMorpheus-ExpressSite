@@ -7,16 +7,18 @@
     </head>
     <body>
         <h1><%=product.name; %></h1>
+        <img src="<%=product.img; %>">
         <p><b>Description:</b> <%= product.description %></p>
         <p><b>Specs:</b> <%= product.specs %></p> 
         
         <a href="/products/<%=product._id %>/edit">Edit Product</a>
+        <br>
+        <br>
         <form action="/products/<%=product._id %>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE" />
         </form>
         <br>
-        <nav>
-            <a href="/products">Back to Home Page</a>
-        </nav>
+        <%- include ('./partials/footer.ejs') %>
+
     </body>
 </html>
