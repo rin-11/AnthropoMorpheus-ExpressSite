@@ -7,7 +7,21 @@
 	</head>
 	<body>
 		<%- include ('./partials/header.ejs') %>
+		<h2><u> <%=product.name; %> </u></h2>
 
+	<div id="edit">
+		<form action="/products/<%=product._id%>?_method=PUT" method="POST">
+		  
+		  <b>Name:</b> <input type="text" name="name"/><br/>
+		  <b>Description:</b> <input type="text" name="description" /><br/>
+		  <b>Image Address:</b> <input type="text" name="img"/><br/>
+		  <b>Specs:</b> <input type="number" name="specs"/><br/>
+		  
+		  <input type="submit" value="Submit Changes" />
+		
+		</form>
+		
+	</div>
 	</body>
 
 </html>
