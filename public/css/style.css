@@ -25,7 +25,7 @@ h2 {
 
 #navigationbar a {
     text-decoration: none;
-    color: rgb(247, 156, 156);
+    color: rgb(242, 230, 230);
 }
 
 #footer {
@@ -72,10 +72,32 @@ h2 {
     height: 250px;
 }
 
+#productshow {
+    color: aliceblue;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+#productshow img {
+    width: 300px;
+    height: 400px;
+
+}
+
 #new a {
     text-decoration: none;
     color: rgb(65, 205, 212);
     font-size: 20px;
+}
+
+#aboutus {
+    margin: 20px;
+    padding: 40px;
+    font-size: 25px;
+    border: 10px solid white;
+    color: white;
 }
 
 

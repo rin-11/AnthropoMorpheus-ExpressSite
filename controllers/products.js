@@ -73,6 +73,11 @@ router.get("/:id/edit", (req, res) => {
     })
 })
 
+// About US route 2
+router.get('/aboutus', (req, res) => {
+    res.render('aboutus.ejs')
+})
+
 // SHOW route
 router.get('/show', (req, res) => {
 	Product.find({}, (err, foundProduct) => {
@@ -91,6 +96,9 @@ router.get('/:id', (req, res) => {
 		})
 	})
 })
+
+
+
 
 
 
