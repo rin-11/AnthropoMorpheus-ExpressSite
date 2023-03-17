@@ -59,7 +59,8 @@
         //gives us access to DELETE 
     app.use(express.static('public'));
         //link application to router
-
+    
+     app.use('/public/assets', express.static('/public/assets'))
 
 
 

@@ -8,8 +8,11 @@
   </head>
 
   <body>
-    
-    <h1>Sign In</h1>
+
+    <%- include ('../partials/header.ejs') %>
+ 
+    <h2>Sign In</h2>
+    <div id="login">
     <form action="/users/signin" method="POST">
       <fieldset>
         <label for="username">Username:</label>
@@ -25,7 +28,7 @@
       <br>
       <input type="submit" value="Sign In">
     </form>
-    
+    </div>
     <br>
     <%- include ('../partials/footer.ejs') %>
 
