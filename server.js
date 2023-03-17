@@ -6,17 +6,20 @@
     // mongoose connection
     const mongoose = require('mongoose');
 
+    // reference product model
+   const Product = require('./models/products'); 
 
     // import products controller
     const productsController = require('./controllers/products.js')
 
-  
-    // reference product model
-    const Product = require('./models/products'); 
+    // import users controller
+    const usersController = require('./controllers/users.js')
+
+    // import session
+    const session = require('express-session');
 
     // method override
     const methodOverride = require('method-override');
-
 
 
     // .env dependency PORT
@@ -45,8 +48,21 @@
         //gives us access to DELETE 
     app.use(express.static('public'));
         //link application to router
-    app.use('/products', productsController);
 
+        
+    app.use('/products', productsController);
+    app.use('/users', usersController)
+
+    // SESSION MIDDLEWARE
+    const SESSION_SECRET = process.env.SESSION_SECRET
+    console.log('session working');       
+    console.log(SESSION_SECRET);
+        // will attach cookie response to save user browser
+    app.use(session({
+        secret: SESSION_SECRET, 
+        resave: false, 
+        saveUninitialized: false 
+    }));
 
 
 
