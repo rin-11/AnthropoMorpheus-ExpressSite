@@ -26,6 +26,17 @@
     require('dotenv').config();
 
 
+    // SESSION MIDDLEWARE
+       const SESSION_SECRET = process.env.SESSION_SECRET
+       console.log('session working');       
+       console.log(SESSION_SECRET);
+    // will attach cookie response to save user browser
+       app.use(session({
+           secret: SESSION_SECRET, 
+           resave: false, 
+           saveUninitialized: false 
+       }));
+
    // database connection
    mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
@@ -49,23 +60,15 @@
     app.use(express.static('public'));
         //link application to router
 
-        
+
+
+
+
+
     app.use('/products', productsController);
     app.use('/users', usersController)
 
-    // SESSION MIDDLEWARE
-    const SESSION_SECRET = process.env.SESSION_SECRET
-    console.log('session working');       
-    console.log(SESSION_SECRET);
-        // will attach cookie response to save user browser
-    app.use(session({
-        secret: SESSION_SECRET, 
-        resave: false, 
-        saveUninitialized: false 
-    }));
-
-
-
+ 
 
 
 // PORT

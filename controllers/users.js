@@ -1,7 +1,7 @@
-const express = require('express')
-const bcrypt = require('bcrypt')
+const express = require('express');
+const bcrypt = require('bcrypt');
 
-const router = express.Router()
+const router = express.Router();
 
 const User = require('../models/users')
 
@@ -19,7 +19,7 @@ router.post('/register', (req, res) => {
 			res.send('that username is taken')
 		} else {
 			User.create(req.body, (err, createdUser) => {
-				console.log(createdUser)
+				// console.log(createdUser)
 				req.session.currentUser = createdUser
 				res.redirect('/products')
 			})
@@ -33,7 +33,7 @@ router.get('/signin', (req, res) => {
 
 
 router.post('/signin', (req, res) => {
-    
+
 	User.findOne({username: req.body.username}, (err, foundUser) => {
 		if(foundUser) {
 			const validLogin = bcrypt.compareSync(req.body.password, foundUser.password)

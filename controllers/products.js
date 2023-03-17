@@ -8,6 +8,15 @@ const router = express.Router()
 const Product = require('../models/products.js');
 
 
+// USER AUTH
+const authRequired = (req, res, next) => {
+	console.log(req.session.currentUser)
+	if (req.session.currentUser && req.session.currentUser.username === 'admin') {
+		next() 
+	} else {
+		res.send('Access Denied')
+	}
+}
 
 // R0UTES -- INDUCES
 
@@ -21,16 +30,24 @@ router.get('/', (req, res) => {
 
 // NEW route
 router.get('/new', (req, res)=>{
-    res.render('new.ejs')
+    console.log(req.session.currentUser)
+	if (req.session.currentUser && req.session.currentUser.username === 'admin') {
+        res.render('new.ejs')
+	} else {
+		res.send('You do not have access to this')
+	}
 });
 
 
 
 // DELETE route
 router.delete("/:id", (req, res) => {
+    if (req.session.currentUser && req.session.currentUser.username === 'admin') {
     Product.findByIdAndRemove(req.params.id, (err, data) => {
         res.redirect("/products/")
-    })
+    })}else {
+        res.send('You do not have access to this')
+    }
 });
 
 
@@ -67,11 +84,17 @@ router.post('/', (req, res)=>{
 // EDIT route
 router.get("/:id/edit", (req, res) => {
     Product.findById(req.params.id, (error, foundProduct) => {
+	if (req.session.currentUser && req.session.currentUser.username === 'admin') {
         res.render("edit.ejs", {
             product: foundProduct
         })
+        }else {
+            res.send('You do not have access to this')
+        }
     })
 })
+
+
 
 // About US route 2
 router.get('/aboutus', (req, res) => {
