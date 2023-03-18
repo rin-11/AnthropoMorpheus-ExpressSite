@@ -10,20 +10,19 @@
 	<body>
 <%- include ('./partials/header.ejs') %>
 
-	<div id="products">
+	<div class="products">
 		<ul>
             <% for(let i=0; i < products.length; i++) { %>
                 <li>
 
                     <a href="/products/<%=products[i].id; %>">
-                       <h2><%=products[i].category; %></h2>
+                       <h3><%=products[i].category; %></h3>
 					   <video id="categories" width="500px" height="250px" autoplay loop muted>
 						<source src="<%=products[i].img; %>" type="video/mp4" />
 					</video>
 					</a>
 
 				</li>
-					<br>
 
 			<% } %>
 		</ul>

@@ -9,9 +9,9 @@
   <body>
 
     <%- include ('../partials/header.ejs') %>
-  <div id="h2header">
+  
     <h2>Register</h2>
-  </div>
+
     <div id="register">
     <form action="/users/register" method="POST">
       <fieldset>
@@ -19,13 +19,10 @@
         <input type="text" name="username">
       </fieldset>
       <br>
-      <br>
       <fieldset>
         <label for="password">Password:</label>
         <input type="password" name="password">
       </fieldset>
-      <br>
-      <br>
       <input type="submit" value="Sign Up">
     </form>
     </div>

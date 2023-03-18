@@ -1,35 +1,85 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Iso&display=swap");
 
 body {
-    background-color: rgb(104, 73, 73);
+    font-family: 'Bebas Neue', cursive;
+    background-color: rgb(63, 65, 66);
 }
 
 h1 {
-    font-family: 'Rubik Iso', cursive;
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
     color: rgb(151, 151, 151);
 }
-#h2header {
-    font-size: 50px;
+#header {
+    font-size: 70px;
 }
 
+
+
 h2 {
-    font-family: 'Rubik Iso', cursive;
     text-align: center;
-    /* font-size: 30px; */
+    font-size: 40px;
     color: rgb(119, 119, 121);
 }
 
 h3 {
+    font-size: 40px;
     text-align: center;
     color: rgb(237, 230, 228);
+}
+#login {
+    font-size: 40px;
+    color: rgb(187, 124, 124);
+    background-color: rgb(45, 47, 47);
+    margin: 50px;
+    padding: 40px;
+    left      : 46%;
+    top       : 66%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+              -1px -1px 10px #ddd,
+              1px -1px 10px #ddd,
+              -1px 1px 10px #ddd;
+}
+
+#register {
+    font-size: 40px;
+    color: rgb(187, 124, 124);
+    background-color: rgb(45, 47, 47);
+    margin: 50px;
+    padding: 40px;
+    left      : 46%;
+    top       : 66%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+              -1px -1px 10px #ddd,
+              1px -1px 10px #ddd,
+              -1px 1px 10px #ddd;
+}
+
+
+#login form {
+    text-align: center;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#register form {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    text-align: center;
 }
 
 #navigationbar {
     display: flex;
-    position: relative;
+    align-items: center;
+    justify-content: center
 }
 
 #navigationbar li {
@@ -71,13 +121,18 @@ h3 {
     color: azure;
 }
 
-#products ul {
-    display: block;
-    columns: 3;
+.products {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.products ul {
+    columns: 2;
 }
 
 
-#products li {
+.products li {
     display: inline-block;
     vertical-align: top;
     list-style: none;
@@ -85,29 +140,9 @@ h3 {
     
 }
 
-#products h3 {
-    font-size: 30px;
-    font-family: 'Rubik Iso', cursive;
-}
-
-#products a{
+.products a{
     text-decoration: none;
     color: rgb(208, 199, 199);
-}
-
-#products img {
-    width: 200px;
-    height: 250px;
-    color: white;
-    margin: 50px;
-    padding: 10px;
-    max-width: fit-content;
-    display: flex;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px #ddd,
-              -1px -1px 10px #ddd,
-              1px -1px 10px #ddd,
-              -1px 1px 10px #ddd;
 }
 
 
@@ -115,8 +150,23 @@ h3 {
     color: aliceblue;
     text-align: center;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+    }
+
+.video {
+  flex-basis: 150%
 }
 
+.text h2 {
+  font-size: 50px;
+  padding-right: 50px;
+}
+.text p {
+  font-size: 30px;
+  padding-right: 50px;
+}
 
 
 #productshow img {
@@ -131,13 +181,16 @@ h3 {
 
 #new a {
     text-decoration: none;
-    color: rgb(65, 205, 212);
+    color: rgb(1, 5, 5);
     font-size: 20px;
 }
 
 #aboutus {
-    margin: 20px;
-    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px;
+    padding: 70px;
     font-size: 25px;
     color: white;
     border-radius: 10px;
@@ -148,7 +201,8 @@ h3 {
 }
 
 #categories {
-    background-color: aliceblue;
+    color: aliceblue;
+    background-color: rgb(135, 136, 138);
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -158,46 +212,11 @@ h3 {
               -1px 1px 10px #ddd;
 }
 
-#homepage {
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px #ddd,
-              -1px -1px 10px #ddd,
-              1px -1px 10px #ddd,
-              -1px 1px 10px #ddd;
-    color: white;
-}
-
-#login {
-    color: white;
-    margin: 50px;
-    padding: 20px;
-    max-width: fit-content;
+.homepage {
+    border-radius: 0px;
     display: flex;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px #ddd,
-              -1px -1px 10px #ddd,
-              1px -1px 10px #ddd,
-              -1px 1px 10px #ddd;
+    align-items: center;
+    justify-content: center
 }
 
-#register {
-    color: white;
-    margin: 50px;
-    padding: 20px;
-    max-width: fit-content;
-    display: flex;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px #ddd,
-              -1px -1px 10px #ddd,
-              1px -1px 10px #ddd,
-              -1px 1px 10px #ddd;
-}
 
-#register form {
-    justify-content: center;
-    text-align: center;
-}
-
-#login form {
-    text-align: center;
-}
