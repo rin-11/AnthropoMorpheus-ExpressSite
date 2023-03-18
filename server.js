@@ -6,14 +6,22 @@
     // mongoose connection
     const mongoose = require('mongoose');
 
+
     // reference product model
-   const Product = require('./models/products'); 
+    const Product = require('./models/products'); 
+    
+    // reference product model
+    // const Wishlist = require('./models/wishlist'); 
+
 
     // import products controller
     const productsController = require('./controllers/products.js')
 
     // import users controller
     const usersController = require('./controllers/users.js')
+    
+    // import wishlist controller
+    const wishlistController = require('./controllers/wishlist.js')
 
     // import session
     const session = require('express-session');
@@ -60,14 +68,12 @@
     app.use(express.static('public'));
         //link application to router
     
-     app.use('/public/assets', express.static('/public/assets'))
-
-
 
 
 
     app.use('/products', productsController);
     app.use('/users', usersController)
+    app.use('/wishlist', wishlistController)
 
  
 

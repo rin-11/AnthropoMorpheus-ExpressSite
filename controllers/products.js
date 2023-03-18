@@ -8,6 +8,16 @@ const router = express.Router()
 const Product = require('../models/products.js');
 
 
+
+// // --------------------------------------------
+// Path for multer
+// const path = require('path')
+// Require multer
+// const multer = require('multer')
+// // create object containing all the information related to storage
+// const upload = multer({dest: "../public/assets"})
+// // --------------------------------------------
+
 // USER AUTH
 const authRequired = (req, res, next) => {
 	console.log(req.session.currentUser)
@@ -18,6 +28,19 @@ const authRequired = (req, res, next) => {
 	}
 }
 
+// ---------------------------------
+  // create storage variable to direct to images/animations
+//   const storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, '/public/assets')
+//     },
+//     filename: (req, file, cb) => {
+//         console.log(file)
+//         cb(null, Date.now() + path.extname(file.originalname))
+//     }
+// })
+// ---------------------------------
+
 // R0UTES -- INDUCES
 
 // INDEX route
@@ -26,6 +49,7 @@ router.get('/', (req, res) => {
         res.render('index.ejs')
     });
 });
+
 
 
 // NEW route
@@ -80,6 +104,15 @@ router.post('/', (req, res)=>{
     });
 });
 
+// ---------------------------------
+    // router.post('/upload', upload.single("image"), (req, res) => {
+    //     res.send('Image Uploaded');
+    // });
+
+
+
+// ---------------------------------
+
 
 // EDIT route
 router.get("/:id/edit", (req, res) => {
@@ -99,6 +132,11 @@ router.get("/:id/edit", (req, res) => {
 // About US route 2
 router.get('/aboutus', (req, res) => {
     res.render('aboutus.ejs')
+})
+
+// Wishlist page
+router.get('/wishlist', (req, res) => {
+    res.render('wishlist.ejs')
 })
 
 // SHOW route

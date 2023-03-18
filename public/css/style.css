@@ -16,11 +16,14 @@ h1 {
               1px -1px 10px #ddd,
               -1px 1px 10px #ddd;
 }
+#h2header {
+    font-size: 30px;
+}
 
 h2 {
     font-family: 'Rubik Iso', cursive;
     text-align: center;
-    font-size: 30px;
+    /* font-size: 30px; */
     color: rgb(237, 230, 228);
 }
 
@@ -68,13 +71,11 @@ h3 {
     color: azure;
 }
 
-.products ul {
-    display: block;
-}
-
 #products ul {
+    display: block;
     columns: 3;
 }
+
 
 #products li {
     display: inline-block;
@@ -82,6 +83,11 @@ h3 {
     list-style: none;
     font-size: 20px;
     
+}
+
+#products h3 {
+    font-size: 30px;
+    font-family: 'Rubik Iso', cursive;
 }
 
 #products a{
