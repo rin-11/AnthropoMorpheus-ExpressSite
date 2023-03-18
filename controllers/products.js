@@ -36,8 +36,7 @@ router.get('/new', (req, res)=>{
 	if (req.session.currentUser && req.session.currentUser.username === 'admin') {
         res.render('new.ejs')
 	} else {
-		res.send('You do not have access to this')
-	}
+        res.render('partials/accessdenied.ejs');	}
 });
 
 
@@ -48,7 +47,7 @@ router.delete("/:id", (req, res) => {
     Product.findByIdAndRemove(req.params.id, (err, data) => {
         res.redirect("/products/")
     })}else {
-        res.send('You do not have access to this')
+        res.render('partials/accessdenied.ejs');
     }
 });
 
@@ -91,8 +90,7 @@ router.get("/:id/edit", (req, res) => {
             product: foundProduct
         })
         }else {
-            res.send('You do not have access to this')
-        }
+            res.render('partials/accessdenied.ejs');        }
     })
 })
 
@@ -103,9 +101,9 @@ router.get('/aboutus', (req, res) => {
     res.render('aboutus.ejs')
 })
 
-router.get('/wishlist', (req, res) => {
-	res.render('wishlist.ejs')
-})
+// router.get('/wishlist', (req, res) => {
+// 	res.render('wishlist.ejs')
+// })
 
 // router.post("/", async (req, res) => {
 //     Product.findById(req.params.id, function(err, foundProduct){

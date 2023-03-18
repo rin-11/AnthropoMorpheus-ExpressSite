@@ -15,7 +15,11 @@ h1 {
     font-size: 70px;
 }
 
-
+.access {
+    text-align: center;
+    font-size: 100px;
+    color:crimson;
+}
 
 h2 {
     text-align: center;
