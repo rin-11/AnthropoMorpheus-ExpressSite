@@ -138,7 +138,7 @@ router.get("/:id/edit", (req, res) => {
 router.get('/aboutus', (req, res) => {
     res.render('aboutus.ejs')
 })
-// About Us route 2
+// wishlist route under construction
 router.get('/wishlist', (req, res) => {
     res.render('wishlist.ejs')
 })

@@ -16,7 +16,7 @@ router.post('/register', (req, res) => {
 
 	User.findOne({username: req.body.username}, (err, userExists) => {
 		if (userExists) {
-			res.send('that username is taken')
+			res.render('partials/baduser.ejs');
 		} else {
 			User.create(req.body, (err, createdUser) => {
 				// console.log(createdUser)
@@ -41,10 +41,10 @@ router.post('/signin', (req, res) => {
 				req.session.currentUser = foundUser
 				res.redirect('/products')
 			} else {
-				res.send('Invalid username or password')
+				res.render('partials/invalid.ejs');
 			}
 		} else {
-			res.send('Invalid username or password')
+			res.render('partials/invalid.ejs');
 		}
 	})
 })
