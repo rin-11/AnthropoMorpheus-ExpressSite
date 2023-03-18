@@ -10,26 +10,23 @@
   <body>
 
     <%- include ('../partials/header.ejs') %>
-    <h2>Log in</h2>
-
+    <h5>L o g  i n</h5>
     <div id="login">
     <form action="/users/signin" method="POST">
       <fieldset>
-        <label for="username">Username:</label>
+        <label for="username">Username :</label>
         <input type="text" name="username">
       </fieldset>
       <br>
 
       <fieldset>
-        <label for="password">Password:</label>
+        <label for="password">Password :</label>
         <input type="password" name="password">
       </fieldset>
  
       <input type="submit" value="Sign In">
     </form>
     </div>
-    <br>
-    <%- include ('../partials/footer.ejs') %>
 
   </body>
 

@@ -27,13 +27,14 @@
         <%- include ('./partials/footer.ejs') %>
         <br>
         <br>
+        <div class="editdelete">
         <a href="/products/<%=product._id %>/edit">Edit Product</a>
         <br>
         <br>
         <form action="/products/<%=product._id %>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE" />
         </form>
-
+        </div>
 
         <br>
 

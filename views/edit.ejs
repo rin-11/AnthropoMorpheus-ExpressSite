@@ -7,7 +7,6 @@
 	</head>
 	<body>
 		<%- include ('./partials/header.ejs') %>
-		<h2> <%=product.name; %> </h2>
 
 	<div id="edit">
 		<form action="/products/<%=product._id%>?_method=PUT" method="POST">
@@ -15,22 +14,25 @@
 		  <b>Name:</b> <input type="text" name="name" placeholder="<%=product.name; %>"/>
 		  <br>
 		  <br>
+
 		  <b>Description:</b> <input type="text" name="description" placeholder="<%=product.description; %>"/>
 		  <br>
 		  <br>
+
 		  <b>Category:</b> <input type="text" name="category" placeholder="<%=product.category; %>"/>
 		  <br>
 		  <br>
-		  <b>Image Address:</b> <input type="text" name="img" placeholder="<%=product.img; %>"/>
 
+
+		  <b>Image Address:</b> <input type="text" name="img" placeholder="<%=product.img; %>"/>
 		  <br>
 		  <br>
-		  <br>
+
 
 		  <input type="submit" value="Submit Changes" />
 		
 		</form>
-		<br>
+
 	</div>
 	<%- include ('./partials/footer.ejs') %>
 	</body>

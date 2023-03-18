@@ -32,8 +32,14 @@ h3 {
     text-align: center;
     color: rgb(237, 230, 228);
 }
-#login {
+
+h5 {
+    text-align: center;
     font-size: 40px;
+    color: rgb(187, 124, 124);
+}
+#login {
+    font-size: 30px;
     color: rgb(187, 124, 124);
     background-color: rgb(45, 47, 47);
     margin: 50px;
@@ -50,7 +56,7 @@ h3 {
 }
 
 #register {
-    font-size: 40px;
+    font-size: 30px;
     color: rgb(187, 124, 124);
     background-color: rgb(45, 47, 47);
     margin: 50px;
@@ -107,11 +113,85 @@ h3 {
     }
 
 #footer {
+    color: rgb(158, 151, 151);
+    font-size: 20px;
     text-align: center;
 }
 
 #new {
     text-align: center;
+    font-size: 30px;
+    color: rgb(187, 124, 124);
+    background-color: rgb(45, 47, 47);
+    margin: 50px;
+    padding: 40px;
+    left      : 46%;
+    top       : 66%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+              -1px -1px 10px #ddd,
+              1px -1px 10px #ddd,
+              -1px 1px 10px #ddd;
+}
+
+#new input {
+    background-color: rgb(80, 69, 73);
+    text-decoration: none;
+    color: rgb(255, 250, 250);
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+}
+
+#edit {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(187, 124, 124);
+    background-color: rgb(45, 47, 47);
+    margin: 50px;
+    padding: 40px;
+    left      : 46%;
+    top       : 66%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+              -1px -1px 10px #ddd,
+              1px -1px 10px #ddd,
+              -1px 1px 10px #ddd;
+}
+
+#edit input {
+    background-color: rgb(80, 69, 73);
+    text-decoration: none;
+    color: rgb(255, 250, 250);
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+}
+
+#newproduct {
+    text-align: center;
+}
+.editdelete {
+    text-align: center;
+    color: dimgray;
+}
+
+.editdelete a {
+    text-decoration: none;
+    color: rgb(1, 5, 5);
+    font-size: 20px;
+}
+
+.editdelete input {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: rgb(80, 72, 72);
+    color: black;
 }
 
 #footer a{
@@ -183,18 +263,18 @@ h3 {
               -1px 1px 10px #ddd;
 }
 
-#new a {
+#newproduct a {
     text-decoration: none;
     color: rgb(1, 5, 5);
     font-size: 20px;
 }
 
-#aboutus {
+#homepage {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 60px;
-    padding: 70px;
+    margin: 30px;
+    padding: 30px;
     font-size: 25px;
     color: white;
     border-radius: 10px;
@@ -202,6 +282,23 @@ h3 {
               -1px -1px 10px #ddd,
               1px -1px 10px #ddd,
               -1px 1px 10px #ddd;
+}
+#aboutus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    padding: 40px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+              -1px -1px 10px #ddd,
+              1px -1px 10px #ddd,
+              -1px 1px 10px #ddd;
+}
+#aboutus p{
+    font-size: 40px;
 }
 
 #categories {
