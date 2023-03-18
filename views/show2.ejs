@@ -9,14 +9,18 @@
         <%- include ('./partials/header.ejs') %>
     
     <div id="productshow">
-        <h2><%=product.name; %></h2>
+        <h2><%=product.category; %></h2>
         <img src="<%=product.img; %>">
-        <p><b>Description:</b> <%= product.description %></p>
-        <p><b>Specs:</b> <%= product.specs %></p> 
+        <h2><%=product.name; %></h2>
+        <p><b><%= product.description %></p>
+        
+
         <br>
-        <form action="/wishlist/" method="POST">
+        <!-- <form action="/wishlist/" method="POST">
             <button>Add to Wishlist</button>
-            </form>
+            </form> -->
+        <br>
+        <%- include ('./partials/footer.ejs') %>
         <br>
         <br>
         <a href="/products/<%=product._id %>/edit">Edit Product</a>
@@ -28,7 +32,7 @@
     </div>
 
         <br>
-        <%- include ('./partials/footer.ejs') %>
+
 
     </body>
 </html>
