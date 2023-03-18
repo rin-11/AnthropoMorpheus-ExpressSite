@@ -147,6 +147,17 @@ h3 {
               -1px 1px 10px #ddd;
 }
 
+#categories {
+    background-color: aliceblue;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+              -1px -1px 10px #ddd,
+              1px -1px 10px #ddd,
+              -1px 1px 10px #ddd;
+}
+
 #homepage {
     border-radius: 10px;
     box-shadow: 1px 1px 10px #ddd,

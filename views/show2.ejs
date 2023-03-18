@@ -10,7 +10,9 @@
     
     <div id="productshow">
         <h2><%=product.category; %></h2>
-        <img src="<%=product.img; %>">
+        <video id="categories" width="60%" height="40%" autoplay loop muted>
+            <source src="<%=product.img; %>" type="video/mp4" />
+        </video>
         <h2><%=product.name; %></h2>
         <p><b><%= product.description %></p>
         
