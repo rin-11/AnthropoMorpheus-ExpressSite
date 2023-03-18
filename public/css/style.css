@@ -23,7 +23,7 @@ h1 {
 
 h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     color: rgb(119, 119, 121);
 }
 
@@ -43,7 +43,7 @@ h5 {
     color: rgb(187, 124, 124);
     background-color: rgb(45, 47, 47);
     margin: 50px;
-    padding: 40px;
+    padding: 30px;
     left      : 46%;
     top       : 66%;
     position  : absolute;
@@ -60,7 +60,7 @@ h5 {
     color: rgb(187, 124, 124);
     background-color: rgb(45, 47, 47);
     margin: 50px;
-    padding: 40px;
+    padding: 30px;
     left      : 46%;
     top       : 66%;
     position  : absolute;
@@ -193,6 +193,24 @@ h5 {
     background-color: rgb(80, 72, 72);
     color: black;
 }
+.wishlist {
+    text-align: center;
+    color: dimgray;
+}
+
+.wishlist a {
+    text-decoration: none;
+    color: rgb(1, 5, 5);
+    font-size: 20px;
+}
+
+.wishlist input {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: rgb(80, 72, 72);
+    color: black;
+}
 
 #footer a{
     text-decoration: none;
@@ -283,6 +301,7 @@ h5 {
               1px -1px 10px #ddd,
               -1px 1px 10px #ddd;
 }
+
 #aboutus {
     display: flex;
     align-items: center;
@@ -314,6 +333,12 @@ h5 {
 }
 
 .homepage {
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.wishlist {
     border-radius: 0px;
     display: flex;
     align-items: center;

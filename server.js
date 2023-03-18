@@ -3,6 +3,7 @@
     const express = require('express');
     const app = express();
 
+    // require file for mp4s
     const fs = require("fs");
 
     // mongoose connection
@@ -12,8 +13,8 @@
     // reference product model
     const Product = require('./models/products'); 
     
-    // reference product model
-    // const Wishlist = require('./models/wishlist'); 
+    // reference wishlist model
+    const Wishlist = require('./models/wishlist'); 
 
 
     // import products controller
@@ -23,7 +24,7 @@
     const usersController = require('./controllers/users.js')
     
     // import wishlist controller
-    // const wishlistController = require('./controllers/wishlist.js')
+    const wishlistController = require('./controllers/wishlist.js')
 
     // import session
     const session = require('express-session');
@@ -79,7 +80,7 @@ app.get("/", function (req, res) {
 
     app.use('/products', productsController);
     app.use('/users', usersController)
-    // app.use('/wishlist', wishlistController)
+    app.use('/wishlist', wishlistController)
 
  
 

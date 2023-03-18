@@ -6,8 +6,8 @@ const router = express.Router()
 
 // import product model
 const Product = require('../models/products.js');
-
-const Wishlist = require("../models/Wishlist")
+// import wishlist model
+// const Wishlist = require('../models/wishlist.js');
 
 // USER AUTH
 const authRequired = (req, res, next) => {
@@ -66,6 +66,20 @@ router.put("/:id", (req, res) => {
     )
 })
 
+// wishlist UPDATE route
+// router.put("/:id", (req, res) => {
+//     Wishlist.findByIdAndUpdate(
+//         req.params.id,
+//         req.body,
+//         {
+//             new: true,
+//         },
+//         (error, updatedWishlist) => {
+//             res.redirect(`wishlist.ejs`)
+//         }
+//     )
+// })
+
 
 
 // CREATE route
@@ -76,10 +90,25 @@ router.post('/', (req, res)=>{
             console.log(error);
             res.send(error);
         }else{ // send product to DB if no error
-            res.redirect('/products/'); //sends back to index page once created
+				res.redirect('/products')
         }
     });
 });
+
+// wishlist CREATE route
+// router.post('/', (req, res)=>{
+//     Wishlist.create(req.body, (err, createdWishlist) => {
+//         req.session.currentWishlist = createdWishlist
+//         res.redirect('/products')
+//         // error handling
+//         if (error){
+//             console.log(error);
+//             res.send(error);
+//         }else{ // send product to DB if no error
+//             res.redirect('/products/wishlist'); 
+//         }
+//     });
+// });
 
 
 // EDIT route
@@ -94,30 +123,26 @@ router.get("/:id/edit", (req, res) => {
     })
 })
 
+// wishlist edit route
+// router.get("/:id/wishlist", (req, res) => {
+//     Product.findById(req.params.id, (error, foundWishlist) => {
+//         res.render("wishlist.ejs", {
+//             wishlist: foundWishlist
+//         })
+//     })
+// })
 
 
-// About US route 2
+
+// About Us route 2
 router.get('/aboutus', (req, res) => {
     res.render('aboutus.ejs')
 })
+// About Us route 2
+router.get('/wishlist', (req, res) => {
+    res.render('wishlist.ejs')
+})
 
-// router.get('/wishlist', (req, res) => {
-// 	res.render('wishlist.ejs')
-// })
-
-// router.post("/", async (req, res) => {
-//     Product.findById(req.params.id, function(err, foundProduct){
-//         if(err){
-//             console.log(err);
-//         }
-//         const Product = {
-//             item: foundProduct._id,
-//         }
-//         Wishlist.items.push(product);
-//         Wishlist.save();
-//         res.redirect("/wishlist");
-//     })
-//     })
 
 // SHOW route
 router.get('/show', (req, res) => {
@@ -138,23 +163,51 @@ router.get('/:id', (req, res) => {
 	})
 })
 
+// wishlist SHOW route
+// router.get('/:id', (req, res) => {
+//     Wishlist.findById(req.params.id, (error, foundWishlist) => {
+// 		if(err){console.log(err.message)}
+// 		res.render('wishlist.ejs', {
+// 			wishlists: foundWishlist
+// 		})
+// 	})
+// })
+
+// wishlist INDEX route
+router.get('/wishlist', (req, res) => {
+    Wishlist.find({}, (error, allWishlist) => {
+        res.render('wishlist.ejs')
+    });
+});
 
 
 
 
+// wishlist new route
+// SHOW route
+// router.get('/', (req, res) => {
+// 	Wishlist.find({}, (err, foundWishlist) => {
+// 		if(err){console.log(err.message)}
+// 		res.render('wishlist.ejs', {
+// 			wishlists: foundWishlist
+// 		})
+// 	})
+// })
 
 
-
-
-
-
-
-
-
-
-
-
-
+// wishlist create route
+// router.post("/", exports.addProductToWishlist =async (req, res) => {
+//     Wishlist.create(req.body, (createdWishlist )=>{
+//     //     // error handling
+//     //     if (error){
+//     //         console.log(error);
+//     //         res.send(error);
+//     //     }else{ // send product to DB if no error
+//     //         res.redirect('/products/wishlist.ejs'); 
+//     //     }
+//     res.send('route wprking')
+//     });
+// });
 
 
 
