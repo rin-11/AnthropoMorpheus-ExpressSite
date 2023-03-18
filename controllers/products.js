@@ -7,16 +7,7 @@ const router = express.Router()
 // import product model
 const Product = require('../models/products.js');
 
-
-
-// // --------------------------------------------
-// Path for multer
-// const path = require('path')
-// Require multer
-// const multer = require('multer')
-// // create object containing all the information related to storage
-// const upload = multer({dest: "../public/assets"})
-// // --------------------------------------------
+const Wishlist = require("../models/Wishlist")
 
 // USER AUTH
 const authRequired = (req, res, next) => {
@@ -27,19 +18,6 @@ const authRequired = (req, res, next) => {
 		res.send('Access Denied')
 	}
 }
-
-// ---------------------------------
-  // create storage variable to direct to images/animations
-//   const storage = multer.diskStorage({
-//     destination: (req, file, cb) => {
-//         cb(null, '/public/assets')
-//     },
-//     filename: (req, file, cb) => {
-//         console.log(file)
-//         cb(null, Date.now() + path.extname(file.originalname))
-//     }
-// })
-// ---------------------------------
 
 // R0UTES -- INDUCES
 
@@ -104,15 +82,6 @@ router.post('/', (req, res)=>{
     });
 });
 
-// ---------------------------------
-    // router.post('/upload', upload.single("image"), (req, res) => {
-    //     res.send('Image Uploaded');
-    // });
-
-
-
-// ---------------------------------
-
 
 // EDIT route
 router.get("/:id/edit", (req, res) => {
@@ -134,10 +103,23 @@ router.get('/aboutus', (req, res) => {
     res.render('aboutus.ejs')
 })
 
-// Wishlist page
 router.get('/wishlist', (req, res) => {
-    res.render('wishlist.ejs')
+	res.render('wishlist.ejs')
 })
+
+// router.post("/", async (req, res) => {
+//     Product.findById(req.params.id, function(err, foundProduct){
+//         if(err){
+//             console.log(err);
+//         }
+//         const Product = {
+//             item: foundProduct._id,
+//         }
+//         Wishlist.items.push(product);
+//         Wishlist.save();
+//         res.redirect("/wishlist");
+//     })
+//     })
 
 // SHOW route
 router.get('/show', (req, res) => {

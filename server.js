@@ -3,6 +3,8 @@
     const express = require('express');
     const app = express();
 
+    const fs = require("fs");
+
     // mongoose connection
     const mongoose = require('mongoose');
 
@@ -21,7 +23,7 @@
     const usersController = require('./controllers/users.js')
     
     // import wishlist controller
-    const wishlistController = require('./controllers/wishlist.js')
+    // const wishlistController = require('./controllers/wishlist.js')
 
     // import session
     const session = require('express-session');
@@ -68,12 +70,16 @@
     app.use(express.static('public'));
         //link application to router
     
+    app.use("/assets", express.static(__dirname + "/assets"))
 
 
+app.get("/", function (req, res) {
+    res.sendFile(__dirname + "/aboutus.html");
+});
 
     app.use('/products', productsController);
     app.use('/users', usersController)
-    app.use('/wishlist', wishlistController)
+    // app.use('/wishlist', wishlistController)
 
  
 

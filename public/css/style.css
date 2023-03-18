@@ -2,29 +2,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap");
 
 body {
-    background-color: rgb(46, 60, 60);
+    background-color: rgb(104, 73, 73);
 }
 
 h1 {
     font-family: 'Rubik Iso', cursive;
-    font-size: 70px;
+    font-size: 50px;
     text-align: center;
-    color: rgb(180, 179, 169);
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px #ddd,
-              -1px -1px 10px #ddd,
-              1px -1px 10px #ddd,
-              -1px 1px 10px #ddd;
+    color: rgb(151, 151, 151);
 }
 #h2header {
-    font-size: 30px;
+    font-size: 50px;
 }
 
 h2 {
     font-family: 'Rubik Iso', cursive;
     text-align: center;
     /* font-size: 30px; */
-    color: rgb(237, 230, 228);
+    color: rgb(119, 119, 121);
 }
 
 h3 {
@@ -34,23 +29,28 @@ h3 {
 
 #navigationbar {
     display: flex;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px #ddd,
-              -1px -1px 10px #ddd,
-              1px -1px 10px #ddd,
-              -1px 1px 10px #ddd;
+    position: relative;
 }
 
 #navigationbar li {
-    list-style: none;
+    display: inline-block;
+    list-style-type: none;
     padding: 10px 40px;
     font-size: 25px;
+    font-family: 'Rubik Iso', cursive;
 }
 
 #navigationbar a {
+    text-align: center;
     text-decoration: none;
     color: rgb(242, 230, 230);
 }
+
+#aboutus video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
 
 #footer {
     text-align: center;
@@ -148,9 +148,6 @@ h3 {
 }
 
 #homepage {
-    margin: 20px;
-    padding: 40px;
-    font-size: 25px;
     border-radius: 10px;
     box-shadow: 1px 1px 10px #ddd,
               -1px -1px 10px #ddd,

@@ -13,7 +13,12 @@
         <img src="<%=product.img; %>">
         <p><b>Description:</b> <%= product.description %></p>
         <p><b>Specs:</b> <%= product.specs %></p> 
-        
+        <br>
+        <form action="/wishlist/" method="POST">
+            <button>Add to Wishlist</button>
+            </form>
+        <br>
+        <br>
         <a href="/products/<%=product._id %>/edit">Edit Product</a>
         <br>
         <br>
