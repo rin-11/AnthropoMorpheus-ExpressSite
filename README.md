@@ -26,6 +26,7 @@ Additional Post-MVP Goals
 -- Countdown to release date
 -- Live chat forum with feedback forum after that uses Nodemailer for email feedback
 -- Add twitter link and maybe keep developing the app content in an ironic way????
+-- Make registration/login a drop down
 
 
  

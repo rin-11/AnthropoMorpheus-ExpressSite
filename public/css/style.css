@@ -17,7 +17,7 @@ h1 {
 
 .access, .baduser, .invalid{
     text-align: center;
-    font-size: 100px;
+    font-size: 80px;
     color:crimson;
 }
 
@@ -84,11 +84,7 @@ h5 {
     color: rgb(242, 230, 230);
 }
 
-#aboutus video {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
+
 
 #footer {
     color: rgb(158, 151, 151);
@@ -158,13 +154,13 @@ h5 {
     color: dimgray;
 }
 
-.editdelete a {
+.editdelete a, .wishlist input  {
     text-decoration: none;
     color: rgb(1, 5, 5);
     font-size: 20px;
 }
 
-.editdelete input {
+.editdelete input, .wishlist input {
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
     text-decoration: none;
@@ -189,6 +185,13 @@ h5 {
     background-color: rgb(80, 72, 72);
     color: black;
 }
+#register input, #login input {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: rgb(80, 72, 72);
+    color: black;
+}
 
 #footer a{
     text-decoration: none;
@@ -201,6 +204,7 @@ h5 {
     color: azure;
 }
 
+
 .products {
     margin: 20px;
     display: flex;
@@ -210,8 +214,6 @@ h5 {
 .products ul {
     columns: 2;
 }
-
-
 .products li {
     display: inline-block;
     vertical-align: top;
@@ -224,7 +226,10 @@ h5 {
     text-decoration: none;
     color: rgb(208, 199, 199);
 }
-
+.products a:hover {
+    text-decoration: none;
+    color: rgb(38, 43, 43);
+}
 
 #productshow {
     color: aliceblue;
@@ -241,10 +246,10 @@ h5 {
 
 .text h2 {
   font-size: 50px;
-  padding-right: 50px;
+  padding-right: 0px;
 }
 .text p {
-  font-size: 30px;
+  font-size: 25px;
   padding-right: 50px;
 }
 
@@ -262,6 +267,11 @@ h5 {
 #newproduct a {
     text-decoration: none;
     color: rgb(1, 5, 5);
+    font-size: 20px;
+}
+#login input, #register input {
+    text-decoration: none;
+    color: rgb(240, 247, 247);
     font-size: 20px;
 }
 
@@ -285,7 +295,7 @@ h5 {
     align-items: center;
     justify-content: center;
     margin: 50px;
-    padding: 40px;
+    padding: 10px;
     font-size: 20px;
     color: white;
     border-radius: 10px;
@@ -295,7 +305,8 @@ h5 {
               -1px 1px 10px #ddd;
 }
 #aboutus p{
-    font-size: 40px;
+    font-size: 30px;
+    padding: 60px;
 }
 
 #categories {
