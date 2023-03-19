@@ -39,7 +39,7 @@ h5 {
     font-size: 40px;
     color: rgb(187, 124, 124);
 }
-#login {
+#login, #register {
     font-size: 30px;
     color: rgb(187, 124, 124);
     background-color: rgb(45, 47, 47);
@@ -56,36 +56,13 @@ h5 {
               -1px 1px 10px #ddd;
 }
 
-#register {
-    font-size: 30px;
-    color: rgb(187, 124, 124);
-    background-color: rgb(45, 47, 47);
-    margin: 50px;
-    padding: 30px;
-    left      : 46%;
-    top       : 66%;
-    position  : absolute;
-    transform : translate(-50%, -50%);
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px #ddd,
-              -1px -1px 10px #ddd,
-              1px -1px 10px #ddd,
-              -1px 1px 10px #ddd;
-}
-
-
-#login form {
-    text-align: center;
-    vertical-align: middle;
-    text-align: center;
-}
-
-#register form {
+#login form, #register form {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
     text-align: center;
 }
+
 
 #navigationbar {
     display: flex;

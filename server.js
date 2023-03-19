@@ -71,6 +71,7 @@
     app.use(express.static('public'));
         //link application to router
     
+        
     app.use("/assets", express.static(__dirname + "/assets"))
 
 
